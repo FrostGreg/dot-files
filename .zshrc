@@ -1,4 +1,4 @@
-# Load Antigen
+Load Antigen
 source "$HOME/antigen.zsh"
 
 # Load Antigen configurations
@@ -60,7 +60,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -83,7 +83,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions git)
+plugins=(zsh-autosuggestions git web-search alias-finder common-aliases colorize)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,3 +115,16 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export ANDROID_HOME=/Users/$USER/Library/Android/sdk
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+
+# export PATH="$HOME/.jenv/bin:$PATH"export PATH="/opt/homebrew/opt/ruby@3.1/bin:$PATH"
+# export PATH="/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
+# export PATH="/opt/homebrew/opt/ruby@3.1/bin:$PATH"
+# export PATH="/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
+
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
