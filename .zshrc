@@ -18,9 +18,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 HYPHEN_INSENSITIVE="true"
 
-OMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
-lugins=(zsh-autosuggestions git web-search alias-finder common-aliases colorize)
+plugins=(zsh-autosuggestions git web-search alias-finder common-aliases colorize)
 
 source $ZSH/oh-my-zsh.sh
 
