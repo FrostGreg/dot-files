@@ -1,4 +1,4 @@
-Load Antigen
+# Load Antigen
 source "$HOME/antigen.zsh"
 
 # Load Antigen configurations
@@ -115,9 +115,6 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-export ANDROID_HOME=/Users/$USER/Library/Android/sdk
-export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 
 # export PATH="$HOME/.jenv/bin:$PATH"export PATH="/opt/homebrew/opt/ruby@3.1/bin:$PATH"
 # export PATH="/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
