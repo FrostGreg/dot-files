@@ -397,6 +397,11 @@ require('lazy').setup({
         extensions = {
           ['ui-select'] = { require('telescope.themes').get_dropdown() },
         },
+        defaults = {
+          file_ignore_patterns = {
+            '/build/.*',
+          },
+        },
       }
 
       -- Enable Telescope extensions if they are installed
